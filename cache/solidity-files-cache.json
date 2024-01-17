@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/arunprajapati/test-trading/contracts/Web3Token.sol": {
-      "lastModificationDate": 1705043590891,
-      "contentHash": "18c66ee635522146b2ff15c97733830a",
+      "lastModificationDate": 1705481933501,
+      "contentHash": "32b89cadaf76d0f4cf370422cfb76b18",
       "sourceName": "contracts/Web3Token.sol",
       "solcConfig": {
         "version": "0.8.20",
@@ -31,15 +31,13 @@
       },
       "imports": [
         "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol",
-        "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol",
-        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+        "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol"
       ],
       "versionPragmas": [
         "^0.8.20"
       ],
       "artifacts": [
-        "MyContract2024"
+        "MyToken"
       ]
     },
     "/home/arunprajapati/test-trading/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
@@ -681,8 +679,8 @@
       ]
     },
     "/home/arunprajapati/test-trading/contracts/addLiquidity.sol": {
-      "lastModificationDate": 1705064295104,
-      "contentHash": "39a5b908d682484030a70089d98f032a",
+      "lastModificationDate": 1705395294207,
+      "contentHash": "bcdc1685caf08efe53802d3a6d4c9b24",
       "sourceName": "contracts/addLiquidity.sol",
       "solcConfig": {
         "version": "0.8.20",
@@ -711,7 +709,8 @@
       "imports": [
         "@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol",
         "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "../interfaces/IUniswapV2Router02.sol"
+        "../interfaces/IUniswapV2Router02.sol",
+        "hardhat/console.sol"
       ],
       "versionPragmas": [
         "^0.8.20"
@@ -798,6 +797,155 @@
       "lastModificationDate": 1705052620001,
       "contentHash": "86d02b43b45227b993dcf7f19b863857",
       "sourceName": "interfaces/IUniswapV2Router01.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IUniswapV2Router01"
+      ]
+    },
+    "/home/arunprajapati/test-trading/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1705050009028,
+      "contentHash": "896f68942c3a20e9ae3c3c5bfd3add54",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "/home/arunprajapati/test-trading/contracts/addLiquidityETH.sol": {
+      "lastModificationDate": 1705407868171,
+      "contentHash": "87a41c0b3f01e3a76e6c2e396538ef99",
+      "sourceName": "contracts/addLiquidityETH.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "LiquidityAdderETH"
+      ]
+    },
+    "/home/arunprajapati/test-trading/node_modules/@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol": {
+      "lastModificationDate": 1705399149378,
+      "contentHash": "63ab2386a43d162ad6f9d2b1852e0eda",
+      "sourceName": "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IUniswapV2Router01.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IUniswapV2Router02"
+      ]
+    },
+    "/home/arunprajapati/test-trading/node_modules/@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol": {
+      "lastModificationDate": 1705399160893,
+      "contentHash": "7d5b36f3830b2f40af33717b12ba8897",
+      "sourceName": "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol",
       "solcConfig": {
         "version": "0.8.20",
         "settings": {

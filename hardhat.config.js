@@ -9,8 +9,10 @@ require("@nomiclabs/hardhat-waffle");
 
 module.exports = {
   solidity: "0.8.20",
+  defaultNetwork: "sepolia",
   networks: {
-    goerli: {
+    sepolia: 
+     {
       url: networkConfig.RPC,
       accounts: [process.env.PRIVATE_KEY],
       gasPrice: 20000000000,
