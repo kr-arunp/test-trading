@@ -4,14 +4,9 @@ const { wait } = require("./utils");
 
 const fs = require("fs").promises;
 
-const colorize = (text, color) => `\x1b[${color}m${text}\x1b[0m`;
-
 const writeResultsToFile = async (result) => {
   try {
-    const coloredResults = result.map((x, index) =>
-      colorize(`${index + 1}. ${JSON.stringify(x, null, 2)}`, "32")
-    );
-    await fs.writeFile("tokens.txt", coloredResults.join("\n"));
+    await fs.writeFile("tokens.txt", result.join("\n"));
     console.log("Results written to results.txt successfully.");
   } catch (error) {
     console.error("Error writing results to file:", error);

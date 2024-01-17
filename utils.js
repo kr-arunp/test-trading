@@ -4,15 +4,15 @@ dotenv.config();
 const ALCHEMY_KEY = process.env.ALCHEMY_KEY;
 const QUICK_NODE = process.env.QUICK_NODE;
 const QUICK_NODE_TEST = process.env.QUICK_NODE_TEST;
-const ALCHEMY_KEY_SEP=process.env.ALCHEMY_KEY_SEP;
-const network = process.env.NETWORK || "ETH_TEST_SEP";
+const ALCHEMY_KEY_SEP = process.env.ALCHEMY_KEY_SEP;
+const network = process.env.NETWORK || "ETH_TEST";
 
 const INTIAL_SUPPLY = 100000000000000;
 
 //this is working
-// const CONTRACT_ADDRESS = "0xa6c0eeB475Ef4644041fbdD3BD973195C578c4Dd"; //for goerli
+const CONTRACT_ADDRESS = "0xa6c0eeB475Ef4644041fbdD3BD973195C578c4Dd"; //for goerli
 
-const CONTRACT_ADDRESS="0xdDe6186D1Ffe4DD7a0033521C93829192d1e0094" //for sepolia
+// const CONTRACT_ADDRESS = "0xdDe6186D1Ffe4DD7a0033521C93829192d1e0094"; //for sepolia
 
 const getNetworkConfigurations = () => {
   let RPC, WETH, ROUTER, FACTORY, CHAIN_ID, SYMBOL;
@@ -26,14 +26,14 @@ const getNetworkConfigurations = () => {
       FACTORY = "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f";
       break;
 
-      case "ETH_TEST_SEP":
-        SYMBOL = "ETH";
-        CHAIN_ID = 11155111;
-        RPC = `https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_KEY_SEP}`;
-        WETH = "0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9";
-        ROUTER = "0xC532a74256D3Db42D0Bf7a0400fEFDbad7694008";
-        FACTORY = "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f";
-        break;
+    case "ETH_TEST_SEP":
+      SYMBOL = "ETH";
+      CHAIN_ID = 11155111;
+      RPC = `https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_KEY_SEP}`;
+      WETH = "0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9";
+      ROUTER = "0xC532a74256D3Db42D0Bf7a0400fEFDbad7694008";
+      FACTORY = "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f";
+      break;
     case "ETH":
       SYMBOL = "ETH";
       CHAIN_ID = 1;

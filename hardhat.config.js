@@ -1,24 +1,30 @@
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
-
+require("dotenv").config();
+require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-ethers");
 const { getNetworkConfigurations } = require("./utils");
 
 const networkConfig = getNetworkConfigurations();
-require("@nomiclabs/hardhat-waffle");
 
 module.exports = {
   solidity: "0.8.20",
-  defaultNetwork: "sepolia",
+  defaultNetwork: "goerli",
   networks: {
-    sepolia: 
-     {
+    sepolia: {
       url: networkConfig.RPC,
-      accounts: [process.env.PRIVATE_KEY],
+      accounts: [`0x${process.env.PRIVATE_KEY}`],
       gasPrice: 20000000000,
       gas: 6000000,
-      loggingEnabled:true,
-
+      loggingEnabled: true,
+    },
+    goerli: {
+      url: networkConfig.RPC,
+      accounts: [`0x${process.env.PRIVATE_KEY}`],
+      gasPrice: 20000000000,
+      gas: 6000000,
+      loggingEnabled: true,
     },
   },
 };
